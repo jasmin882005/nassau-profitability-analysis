@@ -1,0 +1,73 @@
+--- Executive Summary Metrics ---
+Total Sales: $141,783.63
+Total Gross Profit: $93,442.80
+Overall Gross Margin: 65.91%
+Total Units: 38,654
+
+--- Product Performance ---
+Top Product: Wonka Bar -Scrumdiddlyumptious ($19,357.50)
+Bottom Product: Fun Dip ($4.80)
+
+--- Division Performance ---
+    Division      Sales  Gross Profit  Units  Gross Margin (%)
+0  Chocolate  131692.90      88824.62  37275         67.448298
+1      Other    9663.25       4333.45   1242         44.844643
+2      Sugar     427.48        284.73    137         66.606625
+
+--- Pareto Analysis ---
+Products for 80% Profit: 4 out of 15 (26.7%)
+
+--- Cost Diagnostics ---
+Cost-Margin Correlation: -0.2972
+
+Simulated Cost Breakdown:
+       Cost Component    Total Cost
+0  Manufacturing Cost  33831.560297
+1       Shipping Cost   9703.877242
+2       Overhead Cost   4805.392460
+
+--- Temporal Trends ---
+      Month     Sales  Gross Profit  Gross Margin (%)
+0   2024-01   2093.90       1366.14         65.243803
+1   2024-02   1379.87        908.59         65.846058
+2   2024-03   4138.90       2671.16         64.537921
+3   2024-04   3988.22       2612.81         65.513186
+4   2024-05   3951.52       2615.44         66.188201
+5   2024-06   3518.76       2330.72         66.236970
+6   2024-07   3865.38       2565.26         66.365015
+7   2024-08   4477.65       2945.87         65.790537
+8   2024-09   7912.10       5206.70         65.806802
+9   2024-10   4815.98       3119.46         64.773110
+10  2024-11   8917.71       5947.31         66.691000
+11  2024-12   8896.21       5861.97         65.892891
+12  2025-01   3489.10       2328.81         66.745292
+13  2025-02   2553.65       1677.55         65.692244
+14  2025-03   5423.24       3588.38         66.166720
+15  2025-04   4922.44       3266.10         66.351240
+16  2025-05   6555.68       4329.10         66.035865
+17  2025-06   6214.93       4123.89         66.354569
+18  2025-07   6057.67       3983.05         65.752179
+19  2025-08   5740.10       3795.40         66.120799
+20  2025-09  11457.60       7498.83         65.448523
+21  2025-10   7345.89       4833.65         65.800740
+22  2025-11  11728.86       7750.66         66.081955
+23  2025-12  12338.27       8115.95         65.778671
+
+--- Top 5 States ---
+   State/Province     Sales  Gross Profit  Gross Margin (%)
+5      California  27917.40      18479.42         66.193199
+34       New York  15541.03      10222.44         65.777107
+51          Texas  13416.09       8909.53         66.409289
+43   Pennsylvania   8027.03       5225.47         65.098424
+55     Washington   6921.15       4566.64         65.980942
+
+--- Customer Insights ---
+Total Customers: 500
+Avg Profit/Customer: $186.89
+Top 5 Customers:
+    Customer ID   Sales  Gross Profit  Units  Gross Margin (%)
+458   CUST-0459  663.39        387.37    118         58.392499
+449   CUST-0450  521.78        324.70    114         62.229292
+213   CUST-0214  548.74        322.24    108         58.723621
+89    CUST-0090  489.86        320.02    124         65.328869
+74    CUST-0075  480.19        317.01    138         66.017618

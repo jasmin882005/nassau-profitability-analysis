@@ -1,0 +1,43 @@
+    with tab9:
+        st.subheader("Sales & Profit Forecasting (6 Months)")
+        if not filtered_df.empty:
+            forecast_df = generate_forecast(filtered_df, periods=6)
+            
+            # Metric Card for Forecasted Totals
+            forecast_only = forecast_df[forecast_df['Type'] == 'Forecast']
+            total_forecast_sales = forecast_only['Sales'].sum()
+            total_forecast_profit = forecast_only['Gross Profit'].sum()
+            
+            c1, c2 = st.columns(2)
+            c1.metric("Forecasted Sales (Next 6 Months)", f"${total_forecast_sales:,.2f}")
+            c2.metric("Forecasted Profit (Next 6 Months)", f"${total_forecast_profit:,.2f}")
+            
+            # Plot
+            fig = px.line(
+                forecast_df,
+                x='Order Date',
+                y='Sales',
+                color='Type',
+                title="Sales Forecast",
+                color_discrete_sequence=[COLOR_SEQUENCE[0], COLOR_SEQUENCE[2]] # Blue for history, Orange for forecast
+            )
+            # Add profit as dashed line or separate chart? Let's use separate traces or dual axis.
+            # Actually, let's just show Sales first, then Profit below.
+            st.plotly_chart(fig, use_container_width=True)
+            
+            fig2 = px.line(
+                forecast_df,
+                x='Order Date',
+                y='Gross Profit',
+                color='Type',
+                title="Gross Profit Forecast",
+                color_discrete_sequence=[COLOR_SEQUENCE[1], COLOR_SEQUENCE[3]] # Green for history, Red for forecast (or similar)
+            )
+            st.plotly_chart(fig2, use_container_width=True)
+            
+            st.markdown("""
+            **Methodology**: Uses Holt-Winters Exponential Smoothing to capture trend and seasonality.
+            *Note: Forecast accuracy depends on historical data volume and consistency.*
+            """)
+        else:
+            st.info("Insufficient data for forecasting.")

@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+
 
 def get_product_profitability(df: pd.DataFrame) -> pd.DataFrame:
     """

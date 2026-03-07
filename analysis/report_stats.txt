@@ -22,9 +22,9 @@ Cost-Margin Correlation: -0.2972
 
 Simulated Cost Breakdown:
        Cost Component    Total Cost
-0  Manufacturing Cost  33831.560297
-1       Shipping Cost   9703.877242
-2       Overhead Cost   4805.392460
+0  Manufacturing Cost  33838.892728
+1       Shipping Cost   9646.574643
+2       Overhead Cost   4855.362629
 
 --- Temporal Trends ---
       Month     Sales  Gross Profit  Gross Margin (%)

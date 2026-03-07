@@ -6,7 +6,6 @@ import plotly.io as pio
 from plotly.subplots import make_subplots
 
 # Set default plotly theme
-# Set default plotly theme
 # pio.templates.default = "plotly_dark"  # Commented out to allow dynamic theme adaptation
 import sys
 import os
@@ -28,7 +27,6 @@ st.set_page_config(layout="wide", page_title="Nassau Candy Profitability Analysi
 COLOR_SEQUENCE = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899', '#6366F1', '#14B8A6']
 
 
-# Styling
 # Styling
 st.markdown("""
 <style>
@@ -150,7 +148,11 @@ else:
     # Date Range Filter
     min_date = df['Order Date'].min()
     max_date = df['Order Date'].max()
-    start_date, end_date = st.sidebar.date_input("Select Date Range", [min_date, max_date], min_value=min_date, max_value=max_date)
+    date_range = st.sidebar.date_input("Select Date Range", [min_date, max_date], min_value=min_date, max_value=max_date)
+    if isinstance(date_range, (list, tuple)) and len(date_range) == 2:
+        start_date, end_date = date_range
+    else:
+        start_date, end_date = min_date, max_date
     
     # Division Filter
     division = st.sidebar.multiselect("Select Division", options=df['Division'].unique(), default=df['Division'].unique())
@@ -380,6 +382,7 @@ else:
                     cust_stats.head(15),
                     x='Customer ID',
                     y='Gross Profit',
+                    color='Gross Profit',
                     title="Top 15 Customers by Profit",
                     hover_data=['Sales', 'Gross Margin (%)'],
                     color_continuous_scale='Viridis'
@@ -396,14 +399,6 @@ else:
         else:
             st.info("No data available.")
 
-    # Sidebar Data Export
-    st.sidebar.markdown("---")
-    st.sidebar.download_button(
-        label="Download Filtered Data",
-        data=filtered_df.to_csv(index=False).encode('utf-8'),
-        file_name='filtered_profitability_data.csv',
-        mime='text/csv',
-    )
     
     with tab9:
         st.subheader("Sales & Profit Forecasting (6 Months)")
@@ -544,4 +539,13 @@ else:
             """)
             
         else:
-            st.info("No data available to generate reports.")                
+            st.info("No data available to generate reports.")
+
+    # Sidebar Data Export (placed after all tabs)
+    st.sidebar.markdown("---")
+    st.sidebar.download_button(
+        label="Download Filtered Data",
+        data=filtered_df.to_csv(index=False).encode('utf-8'),
+        file_name='filtered_profitability_data.csv',
+        mime='text/csv',
+    )

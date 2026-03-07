@@ -84,6 +84,7 @@ def get_monthly_trends(df: pd.DataFrame) -> pd.DataFrame:
         pd.DataFrame: A dataframe with Monthly Sales, Gross Profit, and Gross Margin %.
     """
     try:
+        df = df.copy()
         # Ensure Order Date is datetime
         df['Month'] = df['Order Date'].dt.to_period('M')
         monthly_stats = df.groupby('Month').agg({

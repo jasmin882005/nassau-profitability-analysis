@@ -1,6 +1,6 @@
 # Nassau Candy Profitability Analysis Dashboard 📈
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_svg)](https://jasmin-analytics.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://jasmin-analytics.streamlit.app/)
 
 An interactive Business Intelligence (BI) dashboard built to analyze product line profitability and margin performance for **Nassau Candy Distributor**. This project transforms raw transactional data into actionable strategic insights.
 

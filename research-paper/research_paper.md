@@ -1,7 +1,7 @@
 # Internship Project Report: Product Line Profitability & Margin Performance Analysis
 
 **Prepared By:** Jasmin Jamadar | 
-**Date:** February 28, 2026 | 
+**Date:** February March 2026 | 
 **Prepared For:** Executive Management & Industry Mentors | 
 **Organization:** Nassau Candy Distributor | 
 **Department:** Data Analyst Intern
